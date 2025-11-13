@@ -46,6 +46,38 @@ const person = { name: 'John', age: 30, city: 'New York' };
     console.log(details);
 
 
+// Define the interface
+interface Students {
+    id: number;
+    name: string;
+    grade: number | string;
+    age: number;
+    score: number;
+    gender: string;
+}
+
+// Define the student object
+const student: Students = {
+    id: 101,
+    name: "Alice Smith",
+    grade: 4,
+    age: 20,
+    score: 885,
+    gender: "Female",
+};
+
+// Define the courses array
+const courses: string[] = ["Mathematics", "Physics", "Chemistry", "Biology"];
+
+const studentData = { ...student, courses: courses };
+
+// Log the studentData object
+console.log(studentData);
+
+console.log("Courses offered:");
+courses.map((course, index) => {
+    console.log(`${index + 1}. ${course}`);
+});
 
 
 
